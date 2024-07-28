@@ -14,6 +14,8 @@ typedef priority_queue <int> maxheap;
 const int N=1e9+7;
 const int M=1e8+7;
 
+// Question Link: https://codeforces.com/contest/432/problem/D
+
 // Function to calculate prefix function (pi array)
 vector<int> computePrefixFunction(const string& s) {
     int n = s.size();

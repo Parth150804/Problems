@@ -71,3 +71,69 @@ int main() {
 
     return 0;
 }
+
+
+// Brute Force (Gives TLE on testcase-9)
+
+// bool doesMatch(string &s, int len, string &sub) {
+//     int n = s.size();
+//     for (int i = 0; i < len; i++) {
+//         if (s[i] != s[n-len+i]) {
+//             return false;
+//         }
+//         else {
+//             sub += s[i];
+//         }
+//     }
+//     return true;
+// }
+
+// int numOfOcc(string &sub, string &s) {
+//     int cnt = 0;
+//     int sz1 = s.size();
+//     int sz2 = sub.size();
+//     for (int i = 0; i < sz1; i++) {
+//         bool match = true;
+//         for (int j = 0; j < sz2; j++) {
+//             if (s[i+j] != sub[j]) {
+//                 match = false;
+//                 break;
+//             }
+//         }
+//         if (match) {
+//             cnt++;
+//         }
+//     }
+//     return cnt;
+// }
+
+// void solve(string &s){
+//     vector<pair<int, int>> data;
+
+//     int len = 1;
+//     while (len < s.size()) {
+//         string sub = "\0";
+//         if (doesMatch(s, len, sub)) {
+//             int occ = numOfOcc(sub, s);
+//             data.push_back({len, occ});
+//         }
+//         len++;
+//     }
+//     data.push_back({s.size(), 1});
+
+//     sort(data.begin(), data.end());
+
+//     std::cout << data.size() << "\n";
+//     for (auto p: data) {
+//         std::cout << p.first << " " << p.second << "\n";
+//     }
+// }
+ 
+// int main(){
+//     ios_base::sync_with_stdio(false);
+//     cin.tie(NULL);
+//     string s;
+//     std::cin >> s;
+//     solve(s);
+//     return 0;  
+// }

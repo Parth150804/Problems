@@ -14,6 +14,8 @@ typedef priority_queue <int> maxheap;
 const int N=1e9+7;
 const int M=1e8+7;
 
+// Question Link: https://codeforces.com/contest/1992/problem/C
+
 void solve(int n, int m, int k) {
     vector<int> v(n);
     int num = m;
